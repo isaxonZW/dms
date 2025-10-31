@@ -1,0 +1,16 @@
+# requirements.txt
+solara
+fastapi
+uvicorn[standard]
+python-multipart    # Required for file uploads in FastAPI/Solara
+gunicorn            # Recommended for production deployment (process manager)
+pandas
+geopandas
+pyproj
+shapely
+fpdf
+earthengine-api
+geemap
+ipyleaflet
+matplotlib          # Required for chart generation in PDF
+requests
