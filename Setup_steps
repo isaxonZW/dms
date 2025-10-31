@@ -1,0 +1,60 @@
+Installation and Setup
+This project uses a standard Python virtual environment (.venv).
+
+Prerequisites
+Python 3.10 or higher
+
+Google Earth Engine (EE) account and permissions.
+
+Authentication
+This application requires your Google Earth Engine credentials to be set up locally. Run the following command and follow the browser-based instructions to authenticate your account:
+
+Bash
+
+earthengine authenticate
+Steps
+Clone the Repository:
+
+Bash
+
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
+Activate the Virtual Environment: Ensure your virtual environment is active.
+
+Bash
+
+# For Windows Command Prompt or Linux/macOS Shell
+source .venv/bin/activate
+
+# For Windows PowerShell
+.venv\Scripts\Activate.ps1
+Install Dependencies: Install all required packages into the active environment using pip. (If you have a requirements.txt file, use that instead.)
+
+Bash
+
+pip install fastapi uvicorn solara pandas geopandas shapely pyproj fpdf requests geemap ipyleaflet matplotlib
+Running the Application
+The application is started by launching the Uvicorn server, pointing to the integrated Solara/FastAPI application object (fast_app) in main.py.
+
+Start the Server
+From the project root directory, run:
+
+Bash
+
+uvicorn main:fast_app --host 0.0.0.0 --port 8000
+Access the Dashboard
+Once the server is running, open your web browser and navigate to the local server address:
+
+http://localhost:8000
+
+Project Structure and Stack
+Core Technology Stack
+UI Framework: Solara (Pure Python, component-based)
+
+Web Server: FastAPI (Async HTTP and WebSocket handling)
+
+Data Sources: Google Earth Engine (GEE) and ASIS Esri Image Server
+
+Mapping: ipyleaflet / geemap
+
+Report Generation: fpdf / matplotlib
